@@ -1,30 +1,16 @@
+require('dotenv').config();
 module.exports = {
     "development": {
-        "username": "vsevoloddoroshenko",
-        "password": null,
-        "database": "diploma",
-        "host": "127.0.0.1",
-        "dialect": "postgres"
+        "username": process.env.PG_USER,
+        "password": process.env.PG_PASSWORD,
+        "database": process.env.PG_DB,
+        "host": process.env.PG_HOST,
+        "dialect": process.env.PG_DIALECT
     },
-    // "development": {
-    //     "username": "postgres",
-    //     "password": "postgres",
-    //     "database": "postgres",
-    //     "host": "127.0.0.1",
-    //     "dialect": "postgres"
-    // },
     "test": {
-        "username": "vsevoloddoroshenko",
-        "password": null,
-        "database": "diploma",
-        "host": "127.0.0.1",
-        "dialect": "postgres"
+       
     },
     "production": {
-        "username": "vsevoloddoroshenko",
-        "password": null,
-        "database": "diploma",
-        "host": "127.0.0.1",
-        "dialect": "postgres"
+        "connectionString": process.env.PG_URL
     }
 }

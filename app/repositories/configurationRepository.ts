@@ -1,4 +1,4 @@
-import db from '../../database/models'
+const db = require('../../database/models')
 import sequelize from 'sequelize'
 
 interface ConfigurationBody {

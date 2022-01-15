@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import AcceptTerms from '../AcceptTerms/AcceptTerms';
-import ChoosePackagePackage from '../Step1/StepperChoosePackage'
-import ConfigurationCreator from '../LinkCreation/ConfigurationCreator';
+import AcceptTermsComponent from  '../AcceptTerms/AcceptTerms';
+import ChoosePackagePackageComponent from '../Step1/StepperChoosePackage'
+import ConfigurationCreatorComponent from '../LinkCreation/ConfigurationCreator';
 import { CarConfigurationType } from '../../../interfaces/models/carConfiguration';
 import { Package, PackageType } from '../../../interfaces/models/package';
-import StripeContainer from '../PaymentMethod/StripeContainer';
+import StripeContainerComponent from '../PaymentMethod/StripeContainer';
 import { CarType } from '../../../interfaces/models/car';
 import { SelectedOptionType } from '../../../pages/DashBoard/Order/CreateOrder/CreateOrder';
 
@@ -15,19 +15,19 @@ export const handleRender = (activeStep:number, next: (answer: CarConfigurationT
   switch(activeStep){
     case 0:
       return(
-        <ChoosePackagePackage next={next}/>
+        <ChoosePackagePackageComponent next={next}/>
       )
     case 1: 
         return(
-          <ConfigurationCreator type={orderCreated.package!.type}  next={next}></ConfigurationCreator>
+          <ConfigurationCreatorComponent type={orderCreated.package!.type}  next={next}></ConfigurationCreatorComponent>
         )
     case 2:
       return(
-          <AcceptTerms next={next}/>
+          <AcceptTermsComponent next={next}/>
       )
     case 3: 
         return(  
-          <StripeContainer selectedOptions={orderCreated} />
+          <StripeContainerComponent selectedOptions={orderCreated} />
         )
     default:
       return(

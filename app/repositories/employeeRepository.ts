@@ -1,11 +1,11 @@
-import db from "../../database/models";
+const techdb = require('../../database/models')
 
 const getTechnicianById = async (id:string) => {
-  return await db.Technicians.findByPk(id)
+  return await techdb.Technicians.findByPk(id)
 }
 
 const getRandomTechnician = async () => {
-    const technicians = await db.Technician.findAll();
+    const technicians = await techdb.Technician.findAll();
     const randomTechnician =  technicians[Math.floor(Math.random() * technicians.length)];
     return randomTechnician;
 

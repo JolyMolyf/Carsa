@@ -1,4 +1,4 @@
-import db from "../../database/models"
+const db = require('../../database/models')
 
 const getRandomManager = async ()  => {
   const managers = await db.Manager.findAll()

@@ -1,5 +1,5 @@
 import Op from 'sequelize/types/lib/operators'
-import db from '../../database/models'
+const db = require('../../database/models')
 import {CarType} from '../../types/car'
 import {CarBrandType} from '../../types/carBrand'
 import {Car_OrderType} from '../../types/car_order'

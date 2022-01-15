@@ -1,4 +1,4 @@
-import db from '../../database/models'
+const db = require('../../database/models')
 import {ParsedUrlQuery} from "querystring"
 
 const getAllLocations = async (query: ParsedUrlQuery) => {

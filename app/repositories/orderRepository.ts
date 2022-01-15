@@ -1,4 +1,4 @@
-import db from '../../database/models'
+const db = require('../../database/models')
 
 const getAllOrders = async (limit?: number, offset?: number) => {
     return await db.Order.findAll({

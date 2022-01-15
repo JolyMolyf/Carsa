@@ -1,5 +1,5 @@
 import sequelize, {Op} from 'sequelize'
-import db from '../../database/models'
+const db = require('../../database/models')
 import {hashPassword} from '../utils/authUtils'
 
 const getAllClients = async () => {
